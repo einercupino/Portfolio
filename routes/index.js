@@ -32,6 +32,5 @@ router.get('/contact', function(req, res, next) {
   res.render('contact', { title: 'Contact Us'});
 });
 
-/* ajkdhakjdhks*. */
 
 module.exports = router;
