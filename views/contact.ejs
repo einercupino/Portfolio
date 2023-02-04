@@ -13,46 +13,73 @@
 
 
         </pre>
-        <h1 class="display-1 px-5">
+        <h1 class="display-3 px-5">
           I'd like to connect with you!
         </h1>
       </div>
     </div>
   </div>
 
-  <div class="row bg-secondary">
-    <div class="col-sm-3 "></div>
-
-    <div class="col-sm-3 ">
+  <div class="row bg-secondary justify-content-center">
+    <div class="col-sm-4">
       <div class="container-fluid">
         <pre>
 
 
         </pre>
-        <label for="exampleFormControlInput1" class="form-label">First Name</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Who am I speaking to?">
-
-          <label for="exampleFormControlInput1" class="form-label">Last Name</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1">
-
-          <label for="exampleFormControlInput1" class="form-label">Phone Number</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Where can I reach you?">
-
-        <label for="exampleFormControlInput1" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@whatisyouremail.com">
+        <form>
+          <div class="form-group row">
+            <label for="firstname" class="col-sm-3 col-form-label">First Name</label>
+            <div class="col-sm-6">
+              <input type="fname" class="form-control bg-secondary" id="firstname" placeholder="First Name">
+            </div>
+          </div><p></p>
+          <div class="form-group row">
+            <label for="lastname" class="col-sm-3 col-form-label">Last Name</label>
+            <div class="col-sm-6">
+              <input type="email" class="form-control bg-secondary" id="lastname" placeholder="Last Name">
+            </div>
+          </div> <p></p>
+          <div class="form-group row">
+            <label for="emailadd" class="col-sm-3 col-form-label">Email</label>
+            <div class="col-sm-6">
+              <input type="email" class="form-control bg-secondary" id="emailadd" placeholder="Email Address">
+              <small id="emailblock" class="form-text text-muted">
+                   Don't worry, I will never share your email with any third-party website
+              </small>
+            </div>
+          </div> <p></p>
+          <div class="form-group row">
+            <label for="phonenum" class="col-sm-3 col-form-label">Phone Number</label>
+            <div class="col-sm-6">
+              <input type="phone" class="form-control bg-secondary" id="phonenum" placeholder="Phone Number">
+              <small id="emailblock" class="form-text text-muted">
+                or your phone number for that matter.
+           </small>
+            </div> 
+          </div><p></p>
+          <div class="form-group row">
+            <label for="message" class="col-sm-3 col-form-label">Message</label>
+            <div class="col-sm-9">
+              <textarea class="form-control" id="message" rows="4"></textarea>
+            </div>
+          </div>
+        </form><p></p>
+          <a href="/home"  button type="button" class="btn btn-primary bg-secondary" >Submit</a>
         <pre>
 
 
-
-
-
-
-
         </pre>
+        <div class="container-fluid py-2 my-2">
+
+          I'm on social media! 
+          <i class="fa-brands fa-facebook" onclick=" window.open('https://www.facebook.com/einercupino','_blank')"> <kbd>facebook</kbd></i>
+          <i class="fa-brands fa-linkedin" onclick=" window.open('https://www.linkedin.com/in/einercupino','_blank')"> <kbd>linkedin</kbd></i>
+        </div>
+        
       </div>
     </div>
 
-    <div class="col-sm-3 "></div>
   </div>
 
 <%- include ('partials/bottom_nav.ejs') %>
