@@ -27,21 +27,13 @@ app.use(function(err, req, res, next) {
   // Log the error for debugging purposes
   console.error(err);
 
-  // Set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+  // Set status code
+  res.status(err.status || 500);
 
-  // Render the error page, or a fallback page if "error.ejs" is not found
-  const viewPath = 'error';
-  res.status(err.status || 500).render(viewPath, { title: 'Error' }, (renderErr, html) => {
-    if (renderErr) {
-      // Fallback rendering
-      res.status(500).send('An error occurred. Please try again later.');
-    } else {
-      res.send(html);
-    }
-  });
+  // Render a simple error message
+  res.render('error', { title: 'Error', message: 'An error occurred. Please try again later.' });
 });
+
 
 
 const PORT = process.env.PORT || 3000;
