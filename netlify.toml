@@ -1,7 +1,6 @@
 [build]
   functions = "netlify/functions"
-  command = "npm run build" # Your build command here
-  publish = "public" # Your static files directory
+  publish = "public" # Or wherever your static assets are located
 
 [[redirects]]
   from = "/*"
