@@ -29,6 +29,12 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
+});
+
+
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
